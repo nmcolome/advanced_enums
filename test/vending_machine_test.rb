@@ -19,8 +19,9 @@ class VendingMachineTest < Minitest::Test
 
   def test_vending_machine_has_one_item_in_it
     skip
+
     vm = VendingMachine.new
-    snack = Snack.new("White Castle Burger", 1)
+    snack = Snack.new({name:"White Castle Burger", quantity:1})
 
     vm.add_snack(snack)
 
@@ -32,8 +33,8 @@ class VendingMachineTest < Minitest::Test
   def test_vending_machine_has_two_items_in_it
     skip
     vm = VendingMachine.new
-    snack1 = Snack.new("White Castle Burger", 1)
-    snack2 = Snack.new("Snickers", 4)
+    snack1 = Snack.new({name:"White Castle Burger", quantity:1})
+    snack2 = Snack.new({name:"Snickers", quantity:4})
 
     vm.add_snack(snack1)
     vm.add_snack(snack2)
@@ -48,8 +49,9 @@ class VendingMachineTest < Minitest::Test
   def test_can_gather_just_names_of_snacks
     skip
     vm = VendingMachine.new
-    snack1 = Snack.new("White Castle Burger", 1)
-    snack2 = Snack.new("Snickers", 4)
+    snack1 = Snack.new({name:"White Castle Burger", quantity:1})
+    snack2 = Snack.new({name:"Snickers", quantity:4})
+
 
     vm.add_snack(snack1)
     vm.add_snack(snack2)
@@ -60,9 +62,9 @@ class VendingMachineTest < Minitest::Test
   def test_can_collect_items_by_quantity
     skip
     vm = VendingMachine.new
-    snack1 = Snack.new("White Castle Burger", 1)
-    snack2 = Snack.new("Snickers", 4)
-    snack3 = Snack.new("Burrito", 4)
+    snack1 = Snack.new({name:"White Castle Burger", quantity:1})
+    snack2 = Snack.new({name:"Snickers", quantity:4})
+    snack3 = Snack.new({name:"Burrito", quantity:4})
 
     vm.add_snack(snack1)
     vm.add_snack(snack2)
@@ -78,9 +80,9 @@ class VendingMachineTest < Minitest::Test
   def test_can_collect_all_items_by_first_letter_of_alph
     skip
     vm = VendingMachine.new
-    snack1 = Snack.new("White Castle Burger", 1)
-    snack2 = Snack.new("Snickers", 4)
-    snack3 = Snack.new("Wafer Cookies", 2)
+    snack1 = Snack.new({name:"White Castle Burger", quantity:1})
+    snack2 = Snack.new({name:"Snickers", quantity:4})
+    snack3 = Snack.new({name:"Wafer Cookies", quantity:2})
 
     vm.add_snack(snack1)
     vm.add_snack(snack2)
@@ -94,9 +96,10 @@ class VendingMachineTest < Minitest::Test
   def test_total_number_of_items_in_vending_machine
     skip
     vm = VendingMachine.new
-    snack1 = Snack.new("White Castle Burger", 1)
-    snack2 = Snack.new("Snickers", 4)
-    snack3 = Snack.new("Wafer Cookies", 2)
+    snack1 = Snack.new({name:"White Castle Burger", quantity:1})
+    snack2 = Snack.new({name:"Snickers", quantity:4})
+    snack3 = Snack.new({name:"Wafer Cookies", quantity:2})
+
 
     vm.add_snack(snack1)
     vm.add_snack(snack2)
@@ -108,9 +111,9 @@ class VendingMachineTest < Minitest::Test
   def test_can_create_string_with_first_letter_of_name
     skip
     vm = VendingMachine.new
-    snack1 = Snack.new("White Castle Burger", 1)
-    snack2 = Snack.new("Snickers", 4)
-    snack3 = Snack.new("Wafer Cookies", 2)
+    snack1 = Snack.new({name:"White Castle Burger", quantity:1})
+    snack2 = Snack.new({name:"Snickers", quantity:4})
+    snack3 = Snack.new({name:"Wafer Cookies", quantity:2})
 
     vm.add_snack(snack1)
     vm.add_snack(snack2)
@@ -122,9 +125,9 @@ class VendingMachineTest < Minitest::Test
   def test_can_move_indexes_by_one
     skip
     vm = VendingMachine.new
-    snack1 = Snack.new("White Castle Burger", 1)
-    snack2 = Snack.new("Snickers", 4)
-    snack3 = Snack.new("Wafer Cookies", 2)
+    snack1 = Snack.new({name:"White Castle Burger", quantity:1})
+    snack2 = Snack.new({name:"Snickers", quantity:4})
+    snack3 = Snack.new({name:"Wafer Cookies", quantity:2})
 
     vm.add_snack(snack1)
     vm.add_snack(snack2)
